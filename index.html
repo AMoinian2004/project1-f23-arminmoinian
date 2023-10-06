@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon Info</title>
+    <title>Mini Pokedex</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-<div class="container">
-    <div class="nav">
-        <button id="prevButton">←</button>
-        <button id="nextButton">→</button>
+    <div class="container">
+        <h1>Bits of Good Mid-Semester Project</h1>
+        <div class="main">
+            <div class="pokemon">
+                <img id="pokemonImage" src="" alt="Pokemon Image">
+                <div id="pokemonNameDiv">
+                    <p id="pokemonName"></p>
+                </div>
+                <div id="pokemonTypeDiv">
+                    <h3 id="pokemonTypeLabel">Types:</h3>
+                    <div id="pokemonTypes"></div>
+                </div>
+                <div class="nav">
+                    <button id="prevButton"><</button>
+                    <button id="nextButton">></button>
+                </div>
+            </div>
+            <div class="details">
+                <h2 id="detailTitle">Info</h2>
+                <div id="pokemonAttributes"></div>
+                <div class="buttonsContainer">
+                    <button id="infoButton">Info</button>
+                    <button id="movesButton">Moves</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="pokemon">
-        <img id="pokemonImage" src="" alt="Pokemon Image">
-        <h1 id="pokemonName"></h1>
-        <div id="pokemonTypes"></div>
-    </div>
-
-    <div class="details">
-        <button id="infoButton">Info</button>
-        <button id="movesButton">Moves</button>
-        <div id="pokemonDetails"></div>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
