@@ -45,6 +45,83 @@ body {
     font-size: 16px;
 }
 
+
+#pokemonTypes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#pokemonAttributes {
+    height: 70%;
+    width: 100%;
+    font-size: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    padding: 5%;
+    background-color: #E8E8E8;
+}
+
+.pokemon img {
+    width: 80%;
+    border: solid 3px black;
+    align-self: center;
+}
+
+h1 {
+    margin: 2% auto 2% auto;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 23px;
+}
+
+.nav, .buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 10%;
+}
+
+button {
+    font-size: 22px;
+    border: 1px solid transparent;
+    border-radius: .3em;
+    width: 35%;
+    height: 75%;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#infoButton {
+  background-color: green;
+    color: white;
+}
+#infoButton.active, #movesButton.active {
+    background-color: green;
+    color: white;
+}
+
+#infoButton.inactive {
+  background-color: #E8E8E8;
+  color: black;
+}
+
+.type {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+
 .normal { background-color: #A8A77A; }
 .fire { background-color: #EE8130; }
 .water { background-color: #6390F0; }
