@@ -17,17 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    document.getElementById("infoButton").addEventListener("click", () => {
-        document.getElementById("infoButton").classList.add("active");
-        document.getElementById("movesButton").classList.remove("active");
-        fetchPokemonData(currentPokemonId, "info");
-    });
-
-    document.getElementById("movesButton").addEventListener("click", () => {
-        document.getElementById("movesButton").classList.add("active");
-        document.getElementById("infoButton").classList.remove("active");
-        fetchPokemonData(currentPokemonId, "moves");
-    });
+      document.getElementById("infoButton").addEventListener("click", () => {
+          document.getElementById("infoButton").classList.remove("inactive");
+          document.getElementById("infoButton").classList.add("active");
+          document.getElementById("movesButton").classList.remove("active");
+          document.getElementById("detailTitle").textContent = "Info";
+          fetchPokemonData(currentPokemonId, "info");
+      });
+      
+      document.getElementById("movesButton").addEventListener("click", () => {
+          document.getElementById("movesButton").classList.add("active");
+          document.getElementById("infoButton").classList.remove("active");
+          document.getElementById("infoButton").classList.add("inactive");
+          document.getElementById("detailTitle").textContent = "Moves";
+          fetchPokemonData(currentPokemonId, "moves");
+      });
 });
 
 function fetchPokemonData(id, mode = "info") {
@@ -60,6 +64,6 @@ function fetchPokemonData(id, mode = "info") {
                     details += `<p>${move.move.name}</p>`;
                 });
             }
-            document.getElementById("pokemonDetails").innerHTML = details;
+            document.getElementById("pokemonAttributes").innerHTML = details;
         });
 }
